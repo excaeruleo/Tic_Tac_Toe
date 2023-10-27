@@ -1,4 +1,4 @@
-# Tic_Tac_Toe_Using_C-
+# Tic_Tac_Toe
 Tic Tac Toe game using C++. Additional features include adding in a counter that counts the number of moves to win the game.
 
 In order to run this program, it is recommended to download the MinGW Compiler to install the GCC and G++ compilers run C and C++ programs, respectively. Free Code Camp has a great tutorial on how to get started downloading a compiler for C++: https://www.freecodecamp.org/news/how-to-install-c-and-cpp-compiler-on-windows/.
