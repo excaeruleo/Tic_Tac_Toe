@@ -237,11 +237,30 @@ int main() {
     print_board(board);
     int count = 0;
     while (! game_is_done(board)) {
-        int row, col;
+        char r{};
+        char c{};
+        int row;
+        int col;
         std::cout << "Row play: ";
-        std::cin >> row;
+        std::cin >> r;
+        while (! std::isalpha(r) == 0) {
+            std::cin.clear();
+            std::cin.ignore();
+            std::cout << "Please enter a string row input that can be converted to an integer. Try again." << std::endl;
+            std::cout << "Row play: ";
+            std::cin >> r;
+        }
+        row = int(r) - 48;
         std::cout << "Column play: ";
-        std::cin >> col;
+        std::cin >> c;
+        while (! std::isalpha(c) == 0) {
+            std::cin.clear();
+            std::cin.ignore();
+            std::cout << "Please enter a column row input that can be converted to an integer. Try again." << std::endl;
+            std::cout << "Column play: ";
+            std::cin >> c;
+        }
+        col = int(c) - 48;
         std::cout << std::endl << std::endl;
 
         if (position_occupied(board, std::make_pair(row, col))) {
